@@ -17,7 +17,7 @@ class EmailParser
 
   def parse
    emails = @emails.split(/\s*,|\s/)
-   emails.uniq.reject {|email| email.empty?}
+   emails.uniq.delete_if {|email| email.empty?}
   end
 
 end
